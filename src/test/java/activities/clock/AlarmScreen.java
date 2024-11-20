@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 
 public class AlarmScreen {
     public Button addAlarm = new Button(By.xpath("//android.widget.Button[@content-desc=\"Add alarm\"]"));
-    public Button changeMinutes = new Button(By.xpath("//android.view.View[@content-desc=\"0 minutes\"]"));
     public Button save = new Button(By.xpath("//android.widget.Button[@resource-id=\"com.google.android.deskclock:id/material_timepicker_ok_button\"]"));
 
     public Button setHour(int hour) {
@@ -46,7 +45,13 @@ public class AlarmScreen {
     public void setAlarm(int hour, int minute, String time) {
         addAlarm.click();
         setHour(hour).click();
-        changeMinutes.click();
+        setMinute(minute).click();
+        setTime(time).click();
+        save.click();
+    }
+
+    public void updateAlarm(int hour, int minute, String time){
+        setHour(hour).click();
         setMinute(minute).click();
         setTime(time).click();
         save.click();
