@@ -9,8 +9,8 @@ import java.net.URL;
 import java.time.Duration;
 
 public class AndroidCloud implements IDevice{
-    String userName ="adrinthompson_qgBGpZ";
-    String accessKey ="PsKzmJA1T4az2YHL6vdT";
+    String userName ="";
+    String accessKey ="";
 
 
     @Override
