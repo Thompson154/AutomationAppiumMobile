@@ -13,11 +13,11 @@ public class Android implements IDevice{
     @Override
     public AppiumDriver createDriver() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("appium:deviceName", "Nombre de tu dispositivo virtual o fisico");
+        capabilities.setCapability("appium:deviceName", "Nice");
         capabilities.setCapability("appium:platformVersion", "15.0");
-        capabilities.setCapability("appium:appPackage", "Direccion del package de tu app");
-        capabilities.setCapability("appium:appActivity", "La actividad de tu app en la pantalla en la que estas");
-        capabilities.setCapability("platformName","Android"); // que dispositivo utilizaras
+        capabilities.setCapability("appium:appPackage", "com.google.android.deskclock");
+        capabilities.setCapability("appium:appActivity", "com.android.deskclock.DeskClock");
+        capabilities.setCapability("platformName","Android");
         capabilities.setCapability("appium:automationName","uiautomator2");
         AppiumDriver driver = null;
         try {
